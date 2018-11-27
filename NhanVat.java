@@ -150,11 +150,11 @@ public class NhanVat {
         this.max_bom = max_bom;
         BufferedImage image = null;
         try {
-            if(name=="Thịt Mỡ")image = ImageIO.read(new File("character/ThitMo/thitmo.png"));
-             if(name=="Bé Bỏng")image = ImageIO.read(new File("character/ThitMo/bebong.png"));
-              if(name=="Mắt Xanh")image = ImageIO.read(new File("character/ThitMo/matxanh.png"));
-              
-                  if(name=="Khò Khò")image = ImageIO.read(new File("character/ThitMo/khokho.png"));
+            if(name=="ThitMo")image = ImageIO.read(new File("character/ThitMo/thitmo.png"));
+             if(name=="BeBong")image = ImageIO.read(new File("character/ThitMo/bebong.png"));
+              if(name=="MatXanh")image = ImageIO.read(new File("character/ThitMo/matxanh.png"));
+                if(name=="CuopBien")image = ImageIO.read(new File("character/ThitMo/cuopbien.png"));
+                  if(name=="KhoKho")image = ImageIO.read(new File("character/ThitMo/khokho.png"));
 
             BufferedImage image11 = image.getSubimage(0, 0, 55, 60);
             BufferedImage image12 = image.getSubimage(60, 0, 55, 60);
@@ -482,15 +482,15 @@ public class NhanVat {
               
                 }
                 Parameter.Map[(int) (getPosY() + 30) / Parameter.size][(int) (getPosX() + 25) / Parameter.size] = 0;
-                speed += 0.125;
-                speed_a -= 25;
+                speed += 0.25;
+                speed_a -= 50;
             }
           
             if (speed > max_speed) {
-                speed -= 0.125;
+                speed -= 0.25;
             }
             if (speed_a < max_speed_a) {
-                speed_a += 25;
+                speed_a += 50;
             }
         }
     }
